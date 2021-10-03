@@ -1,6 +1,14 @@
 image_xscale = Size
 image_yscale = Size
 
+if (g.Turn == -1) {
+	draw_sprite(spr_Out, 0, x, y)
+	draw_set_color($6A485C)
+	draw_set_halign(fa_center)
+	draw_text_transformed(x, y + 100, "press R to return\nto the menu", 0.5, 0.5, 0)
+	exit
+}
+
 draw_self()
 
 if (g.Turn == 0 && room != rm_Menu) {

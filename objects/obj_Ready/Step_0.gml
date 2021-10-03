@@ -1,4 +1,4 @@
-if (position_meeting(mouse_x, mouse_y, id) && (g.Turn != 0 || room == rm_Menu)) {
+if (position_meeting(mouse_x, mouse_y, id) && (g.Turn > 0 || room == rm_Menu)) {
 	Size += 0.01
 	Size = min(Size, 0.75)
 	if (mouse_check_button_pressed(mb_left)) {

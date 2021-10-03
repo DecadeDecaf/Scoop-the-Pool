@@ -2,6 +2,8 @@
 
 randomize()
 
+audio_master_gain(0.5)
+g.Mute = false
 g.FrameCount = 0
 
 g.Turn = 0

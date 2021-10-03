@@ -1,4 +1,5 @@
 var f = keyboard_check_pressed(ord("F"))
+var m = keyboard_check_pressed(ord("M"))
 var r = keyboard_check_pressed(ord("R"))
 
 if (f) {
@@ -8,6 +9,15 @@ if (f) {
 		window_set_size(960, 540)
 	} else {
 		window_set_size(1920, 1080)
+	}
+}
+
+if (m) {
+	g.Mute = !g.Mute
+	if (g.Mute) {
+		audio_master_gain(0)
+	} else {
+		audio_master_gain(0.5)
 	}
 }
 

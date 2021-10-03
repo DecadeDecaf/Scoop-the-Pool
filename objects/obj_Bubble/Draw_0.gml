@@ -5,7 +5,7 @@ image_yscale = Size
 
 draw_self()
 
-if (g.Turn == 0) {
+if (g.Turn == 0 || g.Turn == -1) {
 	gpu_set_fog(true, $6A485C, 0, 0)
 	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, 0, -1, 0.5)
 	gpu_set_fog(false, $000000, 0, 0)

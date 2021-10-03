@@ -1,4 +1,7 @@
 function next_turn() {
+	if (g.Turn == -1) {
+		exit
+	}
 	var players = array_length(g.Players)
 	g.Turn += 1
 	if (g.Turn >= players) {
@@ -101,7 +104,7 @@ function wipe_wagers() {
 		if (player.Chips <= 0) {
 			player.Out = true
 			if (i == 0) {
-				game_restart()
+				g.Turn = -1
 			}
 		}
 	}
@@ -215,7 +218,7 @@ function blind_bets() {
 			} else if (player.Chips <= 0) {
 				player.Out = true
 				if (i == 0) {
-					game_restart()
+					g.Turn = -1
 				}
 			} else {
 				player.Wager += player.Chips
