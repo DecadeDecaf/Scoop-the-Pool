@@ -20,7 +20,7 @@ function start_turn() {
 	var turnplayer = g.Players[@ g.Turn]
 	for (var i = 0; i < players; i++) {
 		var player = g.Players[@ i]
-		if (player.Bot == "GameShark Mark" && player.Quirky && g.Turn != i) {
+		if (player.Bot == "GameShark Mark" && !player.Out && player.Quirky && g.Turn != i) {
 			turnplayer.Chips -= 1
 			player.Chips += 1
 		}
