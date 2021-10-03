@@ -103,6 +103,7 @@ function wipe_wagers() {
 		player.Betting = false
 		if (player.Chips <= 0) {
 			player.Out = true
+			player.Wager = 0
 			if (i == 0) {
 				g.Turn = -1
 			}
@@ -217,6 +218,7 @@ function blind_bets() {
 				player.Wager += 5
 			} else if (player.Chips <= 0) {
 				player.Out = true
+				player.Wager = 0
 				if (i == 0) {
 					g.Turn = -1
 				}
